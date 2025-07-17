@@ -199,27 +199,64 @@ transform: translateY(-2px);
 }
 
 /* Mobile-specific improvements */
+/* Améliorations mobile supplémentaires */
 @media (max-width: 640px) {
-.search-section-3d {
-padding: 0 15px;
-}
-.search-tabs {
-flex-wrap: wrap;
-}
-.tab-btn {
-flex: 1;
-min-width: 80px;
-font-size: 11px;
-padding: 8px 4px;
-}
-.custom-container {
-padding-left: 15px;
-padding-right: 15px;
-}
-.section-3d {
-margin: 20px auto;
-padding: 30px 15px;
-}
+  body {
+    overflow-x: hidden !important;
+  }
+  .search-section-3d {
+    min-height: 180px;
+    padding: 0 2px !important;
+    max-width: 98vw !important;
+    width: 98vw !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+  }
+  .tab-btn {
+    font-size: 10px !important;
+    padding: 6px 1px !important;
+  }
+  .form-input-3d, .search-section-3d input, .search-section-3d select, .search-section-3d label {
+    font-size: 12px !important;
+    padding: 8px 4px !important;
+  }
+  .search-section-3d label {
+    font-size: 11px !important;
+  }
+  .search-section-3d button[onclick^="open"],
+  .search-section-3d button[type="submit"] {
+    font-size: 13px !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 8px auto 0 auto !important;
+    display: block !important;
+  }
+  .button-3d, .button-primary-3d, .bg-secondary, .bg-primary {
+    font-size: 13px !important;
+    padding: 10px 0 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    border-radius: 8px !important;
+  }
+  .newsletter input[type="email"] {
+    font-size: 14px !important;
+    padding: 10px 6px !important;
+  }
+  .newsletter button {
+    font-size: 14px !important;
+    padding: 10px 6px !important;
+  }
+  .autocomplete-suggestions {
+    font-size: 14px !important;
+    max-height: 120px !important;
+  }
+  .footer .custom-container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
 }
 
 /* Floating elements */
