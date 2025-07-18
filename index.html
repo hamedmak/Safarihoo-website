@@ -1,0 +1,2740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safarihoo - Your Ultimate Travel Companion</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3A6B35',secondary:'#FFA62B'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script async src="https://tpemd.com/content?currency=usd&trs=055b8eff65addc5e39e7055d9b5217d5&shmarker=569298&combine_promos=101_7873&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%23FFA62B&color_button=%23FFA62B&color_icons=%23FFA62B&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%23FFA62B&border_radius=0&no_labels=&plain=true&promo_id=7879&campaign_id=100" charset="utf-8"></script>
+<script async src="https://tpemd.com/content?currency=usd&trs=055b8eff65addc5e39e7055d9b5217d5&shmarker=569298&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=true&primary=%23FFA62B&promo_id=4044&campaign_id=100" charset="utf-8"></script>
+<script async src="https://tpemd.com/content?currency=usd&trs=055b8eff65addc5e39e7055d9b5217d5&shmarker=569298&lat=51.51&lng=0.06&powered_by=true&search_host=www.aviasales.com%2Fsearch&locale=en&origin=LON&value_min=0&value_max=1000000&round_trip=true&only_direct=false&radius=1&draggable=true&disable_zoom=false&show_logo=false&scrollwheel=false&primary=%23FFA62B&secondary=%23FFA62B&light=%23ffffff&width=1500&height=500&zoom=2&promo_id=4054&campaign_id=100" charset="utf-8"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+padding: 20px;
+}
+.safari-white {
+background-color: #F8F5F0;
+}
+.text-jungle {
+color: #3A6B35;
+}
+.bg-jungle {
+background-color: #3A6B35;
+}
+.text-saffron {
+color: #FFA62B;
+}
+.bg-saffron {
+background-color: #FFA62B;
+}
+
+/* 3D Effects and Enhanced Styling */
+.header-3d {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 4px 20px rgba(0, 0, 0, 0.1);
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+max-width: 1100px;
+margin: 0 auto;
+border-radius: 0 0 20px 20px;
+transform: translateY(2px);
+}
+
+.hero-3d {
+transform-style: preserve-3d;
+perspective: 1000px;
+max-width: 1100px;
+margin: 0 auto;
+border-radius: 20px;
+overflow: hidden;
+}
+
+.search-section-3d {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(15px);
+box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2), 0 8px 30px rgba(0, 0, 0, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.2);
+transform: translateZ(30px) translateY(5px);
+width: 100%;
+max-width: 900px;
+height: auto;
+min-height: 220px;
+margin: 0 auto;
+padding: 0 10px;
+}
+
+.section-3d {
+background: rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(10px);
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 6px 25px rgba(0, 0, 0, 0.08);
+border-radius: 20px;
+margin: 40px auto;
+padding: 60px 0;
+border: 1px solid rgba(255, 255, 255, 0.3);
+max-width: 1100px;
+transform: translateY(3px);
+}
+
+.section-spacing {
+margin: 80px auto;
+max-width: 1100px;
+}
+
+.card-3d {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12), 0 5px 20px rgba(0, 0, 0, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 16px;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transform-style: preserve-3d;
+transform: translateY(2px);
+}
+
+.card-3d:hover {
+transform: translateY(-8px) rotateX(8deg) rotateY(8deg) translateZ(10px);
+box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25), 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.button-3d {
+background: linear-gradient(135deg, #FFA62B 0%, #FF8C00 100%);
+box-shadow: 0 10px 30px rgba(255, 166, 43, 0.35), 0 4px 15px rgba(255, 166, 43, 0.2);
+border: none;
+border-radius: 12px;
+transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transform-style: preserve-3d;
+transform: translateY(1px);
+}
+
+.button-3d:hover {
+transform: translateY(-2px) scale(1.05) translateZ(5px);
+box-shadow: 0 18px 45px rgba(255, 166, 43, 0.45), 0 6px 20px rgba(255, 166, 43, 0.25);
+}
+
+.button-3d:active {
+transform: translateY(-1px) scale(1.02);
+}
+
+.button-primary-3d {
+background: linear-gradient(135deg, #3A6B35 0%, #2E5A2B 100%);
+box-shadow: 0 10px 30px rgba(58, 107, 53, 0.35), 0 4px 15px rgba(58, 107, 53, 0.2);
+transform: translateY(1px);
+}
+
+.button-primary-3d:hover {
+transform: translateY(-2px) translateZ(5px);
+box-shadow: 0 18px 45px rgba(58, 107, 53, 0.45), 0 6px 20px rgba(58, 107, 53, 0.25);
+}
+
+.search-tabs .active-tab {
+color: #3A6B35;
+border-bottom: 3px solid #3A6B35;
+background: linear-gradient(135deg, rgba(58, 107, 53, 0.1) 0%, rgba(58, 107, 53, 0.05) 100%);
+border-radius: 8px 8px 0 0;
+}
+
+.destination-card {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12), 0 5px 20px rgba(0, 0, 0, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 16px;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transform-style: preserve-3d;
+transform: translateY(2px);
+}
+
+.destination-card:hover {
+transform: translateY(-8px) rotateX(8deg) rotateY(8deg) translateZ(10px);
+box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25), 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12), 0 5px 20px rgba(0, 0, 0, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 16px;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transform-style: preserve-3d;
+transform: translateY(2px);
+}
+
+.offer-card:hover {
+transform: translateY(-8px) rotateX(8deg) rotateY(8deg) translateZ(10px);
+box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25), 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.offers-container {
+scrollbar-width: none;
+}
+.offers-container::-webkit-scrollbar {
+display: none;
+}
+
+/* Enhanced form styling */
+.form-input-3d {
+background: rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(10px);
+border: 2px solid rgba(58, 107, 53, 0.2);
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+transition: all 0.3s ease;
+}
+
+.form-input-3d:focus {
+border-color: #3A6B35;
+box-shadow: 0 8px 25px rgba(58, 107, 53, 0.2);
+transform: translateY(-2px);
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .hero-3d,
+  .section-3d,
+  .custom-container,
+  .header-3d {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .hero-3d h1 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .hero-3d p {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .search-section-3d {
+    min-height: 0 !important;
+    padding: 2px 2vw 6px 2vw !important;
+    width: 92vw !important;
+    max-width: 380px !important;
+    min-width: 0 !important;
+    margin: 12px auto 0 auto !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    left: 0 !important;
+    border-radius: 16px !important;
+  }
+  .tab-btn {
+    font-size: 10px !important;
+    padding: 3px 1px !important;
+    margin-bottom: 1px !important;
+  }
+  .form-input-3d, .search-section-3d input, .search-section-3d select, .search-section-3d label {
+    font-size: 11px !important;
+    padding: 4px 2px !important;
+    margin-bottom: 1px !important;
+    line-height: 1.1 !important;
+  }
+  .search-section-3d input[type="text"],
+  .search-section-3d input[type="date"],
+  .search-section-3d select {
+    padding-left: 2.2em !important;
+  }
+  .search-section-3d label {
+    font-size: 10px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .search-section-3d .grid,
+  .search-section-3d .flex {
+    gap: 1px !important;
+    margin-bottom: 1px !important;
+  }
+  .search-section-3d button[onclick^="open"],
+  .search-section-3d button[type="submit"] {
+    font-size: 12px !important;
+    padding: 7px 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 5px auto 0 auto !important;
+    display: block !important;
+  }
+  .button-3d, .button-primary-3d, .bg-secondary, .bg-primary {
+    font-size: 12px !important;
+    padding: 7px 0 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    border-radius: 8px !important;
+  }
+  .destination-card, .offer-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 12px !important;
+    padding: 6px 2px !important;
+  }
+  .destination-card img, .offer-card img {
+    height: 130px !important;
+    object-fit: cover !important;
+    border-radius: 10px 10px 0 0 !important;
+  }
+  .destination-card h3, .offer-card h3, .destination-card .font-bold, .offer-card .font-bold {
+    font-size: 0.95rem !important;
+    margin-bottom: 1px !important;
+    margin-top: 2px !important;
+  }
+  .destination-card .text-sm, .offer-card .text-sm, .destination-card .text-xs, .offer-card .text-xs, .destination-card p, .offer-card p, .destination-card span, .offer-card span {
+    font-size: 0.75rem !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  .destination-card .p-4, .offer-card .p-4 {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+  .destination-card .absolute.top-3.right-3,
+  .destination-card .absolute.top-3.left-3,
+  .destination-card .absolute.bottom-3.left-3 {
+    left: 8px !important;
+    right: 8px !important;
+    width: 90% !important;
+    min-width: 0 !important;
+    font-size: 0.75rem !important;
+    padding: 2px 6px !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+  }
+  .destination-card h3 {
+    margin-bottom: 0 !important;
+    margin-top: 2px !important;
+  }
+  .destination-card .text-primary, .destination-card .text-sm, .destination-card .text-xs {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+  .grid {
+    gap: 8px !important;
+  }
+  .destination-card .people-viewing-label {
+    display: none !important;
+  }
+  .destination-card .absolute.bottom-3.left-3 {
+    display: inline-flex !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    left: 8px !important;
+    right: auto !important;
+    padding: 2px 8px !important;
+    border-radius: 12px !important;
+    font-size: 0.75rem !important;
+    box-sizing: border-box !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+    background: rgba(255,255,255,0.90) !important;
+  }
+}
+
+/* Floating elements */
+.floating {
+animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+}
+
+/* Glass morphism effect */
+.glass {
+background: rgba(255, 255, 255, 0.25);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Custom container for better spacing */
+.custom-container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 4px;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #3A6B35;
+border-color: #3A6B35;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 7px;
+top: 3px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 44px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #3A6B35;
+}
+input:checked + .slider:before {
+transform: translateX(20px);
+}
+}
+
+/* Améliorations mobile supplémentaires */
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  .search-section-3d {
+    min-height: 180px;
+    padding: 0 2px !important;
+    max-width: 98vw !important;
+    width: 98vw !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+  }
+  .tab-btn {
+    font-size: 10px !important;
+    padding: 6px 1px !important;
+  }
+  .form-input-3d, .search-section-3d input, .search-section-3d select, .search-section-3d label {
+    font-size: 12px !important;
+    padding: 8px 4px !important;
+  }
+  .search-section-3d label {
+    font-size: 11px !important;
+  }
+  .search-section-3d button[onclick^="open"],
+  .search-section-3d button[type="submit"] {
+    font-size: 13px !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 8px auto 0 auto !important;
+    display: block !important;
+  }
+  .button-3d, .button-primary-3d, .bg-secondary, .bg-primary {
+    font-size: 13px !important;
+    padding: 10px 0 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    border-radius: 8px !important;
+  }
+  .newsletter input[type="email"] {
+    font-size: 14px !important;
+    padding: 10px 6px !important;
+  }
+  .newsletter button {
+    font-size: 14px !important;
+    padding: 10px 6px !important;
+  }
+  .autocomplete-suggestions {
+    font-size: 14px !important;
+    max-height: 120px !important;
+  }
+  .footer .custom-container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .offer-card {
+    padding: 4px 1px !important;
+    border-radius: 10px !important;
+  }
+  .offer-card img {
+    height: 70px !important;
+    object-fit: cover !important;
+    border-radius: 8px 8px 0 0 !important;
+  }
+  .offer-card h3, .offer-card .font-bold {
+    font-size: 0.85rem !important;
+    margin-bottom: 1px !important;
+    margin-top: 2px !important;
+  }
+  .offer-card .text-sm, .offer-card .text-xs, .offer-card p, .offer-card span {
+    font-size: 0.7rem !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  .offer-card .p-4 {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+  }
+  .offer-card .absolute.top-3.right-3,
+  .offer-card .absolute.top-3.left-3 {
+    left: 6px !important;
+    right: 6px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    font-size: 0.7rem !important;
+    padding: 1px 6px !important;
+    border-radius: 7px !important;
+    box-sizing: border-box !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+    background: #FFA62B !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    height: 1.2em !important;
+    line-height: 1.2em !important;
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* ...autres styles... */
+  .footer, .footer * {
+    font-size: 0.7rem !important;
+  }
+  .footer i, .footer .ri-visa-fill, .footer .ri-mastercard-fill, .footer .ri-paypal-fill, .footer .ri-american-express-fill, .footer .ri-lg,
+  .footer .ri-facebook-fill, .footer .ri-twitter-fill, .footer .ri-youtube-fill, .footer .ri-pinterest-fill {
+    font-size: 1rem !important;
+  }
+  .header-3d .button-primary-3d,
+  .header-3d .button-3d {
+    font-size: 0.8rem !important;
+  }
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header class="sticky top-0 z-50 header-3d">
+<div class="custom-container py-3 flex items-center justify-between">
+<a href="#" class="text-3xl font-['Pacifico'] text-secondary">Safarihoo</a>
+<nav class="hidden md:flex items-center space-x-6">
+<a href="https://aviasales.tpm.li/LrJL8WFF" target="_blank" class="text-primary hover:text-secondary font-medium">Flights</a>
+<a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="text-primary hover:text-secondary font-medium">Hotels</a>
+<a href="https://wegotrip.tpm.li/MiJxBGR8" target="_blank" class="text-primary hover:text-secondary font-medium">Activities</a>
+<a href="https://getrentacar.tpm.li/vioWZ86l" target="_blank" class="text-primary hover:text-secondary font-medium">Car Rentals</a>
+</nav>
+<div class="flex items-center space-x-3">
+<button class="button-primary-3d text-white px-5 py-2 !rounded-button whitespace-nowrap font-medium" onclick="openAIChat()">AI Research</button>
+<a href="#search-section" class="button-3d text-white px-5 py-2 !rounded-button whitespace-nowrap font-medium">Take Action</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-primary">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[500px] bg-cover bg-center hero-3d" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+<div class="absolute inset-0 bg-black bg-opacity-30"></div>
+<div class="custom-container h-full flex flex-col justify-center items-center relative z-10">
+<div class="text-center mb-2">
+<h1 class="text-2xl md:text-4xl font-bold text-white mb-2 md:mb-3">Discover Your Perfect Adventure</h1>
+<p class="text-sm md:text-base text-white max-w-xs md:max-w-md mx-auto">Explore the world's most breathtaking destinations with exclusive deals and personalized recommendations</p>
+</div>
+<!-- Search Section -->
+<div id="search-section" class="search-section-3d rounded-lg p-2 mt-8 max-w-full sm:max-w-[95vw] md:max-w-[900px] mx-auto">
+<!-- Tabs -->
+<div class="search-tabs flex border-b mb-2">
+<button class="tab-btn active-tab px-4 py-2 text-xs font-medium" data-tab="flights">
+<span class="flex items-center">
+<i class="ri-flight-takeoff-line mr-1"></i>
+Flights
+</span>
+</button>
+<button class="tab-btn px-4 py-2 text-xs font-medium text-gray-500" data-tab="hotels">
+<span class="flex items-center">
+<i class="ri-hotel-line mr-1"></i>
+Hotels
+</span>
+</button>
+<button class="tab-btn px-4 py-2 text-xs font-medium text-gray-500" data-tab="cars">
+<span class="flex items-center">
+<i class="ri-car-line mr-1"></i>
+Cars
+</span>
+</button>
+<button class="tab-btn px-4 py-2 text-xs font-medium text-gray-500" data-tab="activities">
+<span class="flex items-center">
+<i class="ri-run-line mr-1"></i>
+Activities
+</span>
+</button>
+</div>
+<!-- Flights Tab Content -->
+<div class="tab-content" id="flights-tab">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+<div>
+<label class="block text-primary text-xs font-medium mb-0">From</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-flight-takeoff-line text-gray-400"></i>
+</div>
+<input type="text" placeholder="City or Airport" class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">To</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-flight-land-line text-gray-400"></i>
+</div>
+<input type="text" placeholder="City or Airport" class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2">
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Departure</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-calendar-line text-gray-400"></i>
+</div>
+<input type="date" class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Return</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-calendar-line text-gray-400"></i>
+</div>
+<input type="date" class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Passengers</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-user-line text-gray-400"></i>
+</div>
+<select class="w-full pl-10 pr-8 py-1.5 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-1 focus:ring-primary">
+<option>1 Adult</option>
+<option>2 Adults</option>
+<option>3 Adults</option>
+<option>4 Adults</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center mb-2 space-y-2 sm:space-y-0">
+<label class="custom-checkbox flex items-center">
+<input type="checkbox">
+<span class="checkmark"></span>
+<span class="ml-7 text-gray-700 text-xs">Direct flights only</span>
+</label>
+<label class="custom-switch sm:ml-6 flex items-center">
+<input type="checkbox">
+<span class="slider"></span>
+<span class="ml-10 text-gray-700 text-xs">Flexible dates</span>
+</label>
+</div>
+<div class="flex justify-center">
+<button class="w-full sm:w-[400px] bg-secondary hover:bg-opacity-90 text-white py-3 px-6 !rounded-button whitespace-nowrap font-medium text-sm md:text-base" onclick="openSearchWidget()">Search Flights</button>
+</div>
+</a>
+</div>
+<!-- Hotels Tab Content (Hidden by default) -->
+<div class="tab-content hidden" id="hotels-tab">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Destination</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-map-pin-line text-gray-400"></i>
+</div>
+<input type="text" placeholder="City or Hotel" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Guests</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-user-line text-gray-400"></i>
+</div>
+<select class="w-full pl-10 pr-8 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-1 focus:ring-primary">
+<option>2 Adults, 0 Children</option>
+<option>2 Adults, 1 Child</option>
+<option>2 Adults, 2 Children</option>
+<option>1 Adult</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Check-in</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-calendar-line text-gray-400"></i>
+</div>
+<input type="date" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Check-out</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-calendar-line text-gray-400"></i>
+</div>
+<input type="date" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center mb-2 space-y-2 sm:space-y-0">
+<label class="custom-checkbox flex items-center">
+<input type="checkbox">
+<span class="checkmark"></span>
+<span class="ml-7 text-gray-700 text-xs">Free cancellation</span>
+</label>
+<label class="custom-checkbox sm:ml-6 flex items-center">
+<input type="checkbox">
+<span class="checkmark"></span>
+<span class="ml-7 text-gray-700 text-xs">Breakfast included</span>
+</label>
+</div>
+<div class="flex justify-center">
+<button class="w-[400px] bg-secondary hover:bg-opacity-90 text-white py-2 !rounded-button whitespace-nowrap font-medium" onclick="openHotelSearch()">Search Hotels</button>
+</div>
+</div>
+<!-- Cars Tab Content (Hidden by default) -->
+<div class="tab-content hidden" id="cars-tab">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-1 mb-1">
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Pick-up Location</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-map-pin-line text-gray-400"></i>
+</div>
+<input type="text" placeholder="City or Airport" class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Drop-off Location</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-map-pin-line text-gray-400"></i>
+</div>
+<input type="text" placeholder="City or Airport" class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-1 mb-1">
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Pick-up Date</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-calendar-line text-gray-400"></i>
+</div>
+<input type="date" class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Drop-off Date</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-calendar-line text-gray-400"></i>
+</div>
+<input type="date" class="w-full pl-10 pr-4 py-1.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+</div>
+<div class="mb-1">
+<label class="block text-primary text-xs font-medium mb-0">Car Type</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-car-line text-gray-400"></i>
+</div>
+<select class="w-full pl-10 pr-8 py-1.5 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Economy</option>
+<option>Compact</option>
+<option>Midsize</option>
+<option>SUV</option>
+<option>Luxury</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<div class="flex justify-center">
+<button class="w-[400px] bg-secondary hover:bg-opacity-90 text-white py-2 !rounded-button whitespace-nowrap font-medium" onclick="openCarSearch()">Search Car Rentals</button>
+</div>
+</div>
+<!-- Activities Tab Content (Hidden by default) -->
+<div class="tab-content hidden" id="activities-tab">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Destination</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-map-pin-line text-gray-400"></i>
+</div>
+<input type="text" placeholder="City or Attraction" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Date</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-calendar-line text-gray-400"></i>
+</div>
+<input type="date" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Activity Type</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-run-line text-gray-400"></i>
+</div>
+<select class="w-full pl-10 pr-8 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-1 focus:ring-primary">
+<option>All Activities</option>
+<option>Tours</option>
+<option>Outdoor Adventures</option>
+<option>Cultural Experiences</option>
+<option>Food & Drink</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-primary text-xs font-medium mb-0">Participants</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-user-line text-gray-400"></i>
+</div>
+<select class="w-full pl-10 pr-8 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-1 focus:ring-primary">
+<option>1 Person</option>
+<option>2 People</option>
+<option>3 People</option>
+<option>4+ People</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center">
+<button class="w-[400px] bg-secondary hover:bg-opacity-90 text-white py-2 !rounded-button whitespace-nowrap font-medium" onclick="openActivitySearch()">Search Activities</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Destinations -->
+<section class="section-3d section-spacing">
+<div class="custom-container">
+<div class="text-center mb-12">
+<h2 class="text-xl font-bold text-primary mb-2">Popular Destinations</h2>
+<p class="text-gray-600 max-w-lg mx-auto text-xs">Explore the world's most sought-after locations with exclusive deals and authentic experiences</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+<!-- Destination Card 1 - United States -->
+<div class="destination-card overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="United States" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Offer!</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">248</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">United States</h3>
+<div class="flex justify-between items-center mt-2">
+<div>
+<span class="text-gray-500 text-sm">Starting from</span>
+<p class="text-primary font-bold">$818</p>
+</div>
+<a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHUS1" target="_blank" class="text-secondary hover:underline font-medium flex items-center">
+View Deals
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Destination Card 2 - United Arab Emirates -->
+<div class="destination-card overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="United Arab Emirates" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">Top 2025</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">312</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">United Arab Emirates</h3>
+<div class="flex justify-between items-center mt-2">
+<div>
+<span class="text-gray-500 text-sm">Starting from</span>
+<p class="text-primary font-bold">$408</p>
+</div>
+<a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHAE1" target="_blank" class="text-secondary hover:underline font-medium flex items-center">
+View Deals
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Destination Card 3 - Canada -->
+<div class="destination-card overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Canada" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Offer!</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">187</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Canada</h3>
+<div class="flex justify-between items-center mt-2">
+<div>
+<span class="text-gray-500 text-sm">Starting from</span>
+<p class="text-primary font-bold">$883</p>
+</div>
+<a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHCA1" target="_blank" class="text-secondary hover:underline font-medium flex items-center">
+View Deals
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Destination Card 4 - Ethiopia -->
+<div class="destination-card overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ethiopia" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">Top 2025</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">275</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Ethiopia</h3>
+<div class="flex justify-between items-center mt-2">
+<div>
+<span class="text-gray-500 text-sm">Starting from</span>
+<p class="text-primary font-bold">$481</p>
+</div>
+<a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHET1" target="_blank" class="text-secondary hover:underline font-medium flex items-center">
+View Deals
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Destination Card 5 - Dubai -->
+<div class="destination-card overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dubai" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Offer!</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">329</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Dubai</h3>
+<div class="flex justify-between items-center mt-2">
+<div>
+<span class="text-gray-500 text-sm">Starting from</span>
+<p class="text-primary font-bold">$247</p>
+</div>
+<a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHDXB1" target="_blank" class="text-secondary hover:underline font-medium flex items-center">
+View Deals
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Destination Card 6 - Sharjah -->
+<div class="destination-card overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sharjah" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">Top 2025</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">203</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Sharjah</h3>
+<div class="flex justify-between items-center mt-2">
+<div>
+<span class="text-gray-500 text-sm">Starting from</span>
+<p class="text-primary font-bold">$272</p>
+</div>
+<a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHSHJ1" target="_blank" class="text-secondary hover:underline font-medium flex items-center">
+View Deals
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Destination Card 7 - Toronto -->
+<div class="destination-card overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Toronto" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Offer!</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">178</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Toronto</h3>
+<div class="flex justify-between items-center mt-2">
+<div>
+<span class="text-gray-500 text-sm">Starting from</span>
+<p class="text-primary font-bold">$945</p>
+</div>
+<a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHYTO1" target="_blank" class="text-secondary hover:underline font-medium flex items-center">
+View Deals
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Destination Card 8 - Montreal -->
+<div class="destination-card overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Montreal" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">Top 2025</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">156</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Montreal</h3>
+<div class="flex justify-between items-center mt-2">
+<div>
+<span class="text-gray-500 text-sm">Starting from</span>
+<p class="text-primary font-bold">$850</p>
+</div>
+<a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHYMQ1" target="_blank" class="text-secondary hover:underline font-medium flex items-center">
+View Deals
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-10">
+<a href="#" class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-colors px-6 py-3 !rounded-button whitespace-nowrap font-medium">View All Destinations</a>
+</div>
+</div>
+</section>
+<!-- Service Sections -->
+<section class="py-16 safari-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Flights Service -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+<i class="ri-flight-takeoff-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Flight Deals</h3>
+<p class="text-gray-600 mb-4">Find the best flight deals from hundreds of airlines and travel agencies. Compare prices and save up to 60% on your next journey.</p>
+<div id="flight-deals-widget" class="bg-gray-50 rounded-lg p-4 mb-4">
+<!-- Flight deals will be loaded here by the script -->
+</div>
+<div class="text-xs text-gray-500 mb-4">
+<p>*Prices are for round-trip economy class and include taxes and fees.</p>
+<p>*Last updated: June 24, 2025</p>
+</div>
+<a href="https://aviasales.tpm.li/LrJL8WFF" target="_blank" class="inline-block bg-secondary hover:bg-opacity-90 text-white px-5 py-2 !rounded-button whitespace-nowrap font-medium">View More Flights</a>
+</div>
+<!-- Hotels Service -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+<i class="ri-hotel-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Hotel Offers</h3>
+<p class="text-gray-600 mb-4">Discover luxury, comfort, and value with our exclusive hotel deals. From boutique stays to 5-star resorts, find your perfect accommodation.</p>
+<div id="hotel-map-widget" class="bg-gray-50 rounded-lg overflow-hidden mb-4">
+<div class="relative h-64">
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986532929688!3d40.69714941978941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sfr!4v1700841234567!5m2!1sen!2sfr" 
+width="100%" 
+height="100%" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+<div class="absolute top-4 left-4 bg-white bg-opacity-90 rounded-lg p-3 shadow-lg">
+<div class="flex items-center space-x-2">
+<i class="ri-hotel-line text-primary"></i>
+<span class="text-sm font-medium text-primary">Popular Hotels</span>
+</div>
+<div class="mt-2 space-y-1">
+<div class="flex items-center justify-between text-xs">
+<span>Luxury Hotels</span>
+<span class="text-secondary font-bold">$200+</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span>Boutique Hotels</span>
+<span class="text-secondary font-bold">$150+</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span>Budget Hotels</span>
+<span class="text-secondary font-bold">$80+</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-4 right-4">
+<button onclick="openHotelMap()" class="bg-primary hover:bg-opacity-90 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-lg">
+<i class="ri-fullscreen-line mr-1"></i>Full Map
+</button>
+</div>
+</div>
+</div>
+<a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="inline-block bg-secondary hover:bg-opacity-90 text-white px-5 py-2 !rounded-button whitespace-nowrap font-medium">View More Hotels</a>
+</div>
+<!-- Activities Service -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+<i class="ri-run-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Activities & Experiences</h3>
+<p class="text-gray-600 mb-4">Create unforgettable memories with our curated experiences. Skip-the-line tickets, guided tours, and unique adventures await.</p>
+<div class="bg-gray-50 rounded-lg p-4 mb-4">
+<h4 class="font-medium text-primary mb-2">Featured Experiences</h4>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2">
+<i class="ri-ship-line text-primary"></i>
+</div>
+<span class="text-sm font-medium">Santorini Sunset Cruise</span>
+</div>
+<span class="text-sm font-bold text-primary">$89</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2">
+<i class="ri-restaurant-line text-primary"></i>
+</div>
+<span class="text-sm font-medium">Tokyo Food Tour</span>
+</div>
+<span class="text-sm font-bold text-primary">$75</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2">
+<i class="ri-building-line text-primary"></i>
+</div>
+<span class="text-sm font-medium">Louvre Skip-the-Line</span>
+</div>
+<span class="text-sm font-bold text-primary">$49</span>
+</div>
+</div>
+</div>
+<div class="text-xs text-gray-500 mb-4">
+<p>*All activities include free cancellation up to 24 hours before.</p>
+<p>*Over 50,000 verified experiences worldwide.</p>
+</div>
+<a href="https://wegotrip.tpm.li/MiJxBGR8" target="_blank" class="inline-block bg-secondary hover:bg-opacity-90 text-white px-5 py-2 !rounded-button whitespace-nowrap font-medium">View More Activities</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Offers -->
+<section class="section-3d section-spacing">
+<div class="custom-container">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h2 class="text-xl font-bold text-primary">Special Offers</h2>
+<p class="text-gray-600 text-xs">Limited-time deals you won't want to miss</p>
+</div>
+<div class="flex space-x-2">
+<button id="prev-offer" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-primary hover:bg-gray-100">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button id="next-offer" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-primary hover:bg-gray-100">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div class="relative">
+<div class="offers-container flex overflow-x-auto space-x-6 pb-4 scrollbar-hide">
+<!-- Offer Card 1 - Hong Kong Disneyland -->
+<div class="offer-card flex-shrink-0 w-full md:w-[350px] overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hong Kong Disneyland" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Time</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">429</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Hong Kong Disneyland</h3>
+<p class="text-gray-600 text-sm mb-3">Magical theme park adventure for the whole family</p>
+<div class="flex items-center mb-3">
+<span class="text-gray-400 line-through mr-2">$95</span>
+<span class="text-primary font-bold text-xl">$75.71</span>
+<span class="ml-2 bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded">Save 20%</span>
+</div>
+<a href="https://fr.trip.com/travel-guide/attraction/hong-kong/hong-kong-disneyland-10558849?curr=EUR&locale=fr-FR&scene=ticket" target="_blank" class="block w-full button-3d text-white text-center py-2 !rounded-button whitespace-nowrap font-medium">View Exclusive Offer</a>
+</div>
+</div>
+<!-- Offer Card 2 - Ocean Park Hong Kong -->
+<div class="offer-card flex-shrink-0 w-full md:w-[350px] overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ocean Park Hong Kong" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Time</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">287</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Ocean Park Hong Kong</h3>
+<p class="text-gray-600 text-sm mb-3">Marine life adventure and thrilling rides</p>
+<div class="flex items-center mb-3">
+<span class="text-gray-400 line-through mr-2">$65</span>
+<span class="text-primary font-bold text-xl">$48.80</span>
+<span class="ml-2 bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded">Save 25%</span>
+</div>
+<a href="https://fr.trip.com/travel-guide/attraction/hong-kong/ocean-park-hong-kong-10558616?curr=EUR&locale=fr-FR&scene=ticket" target="_blank" class="block w-full button-3d text-white text-center py-2 !rounded-button whitespace-nowrap font-medium">View Exclusive Offer</a>
+</div>
+</div>
+<!-- Offer Card 3 - Ngong Ping 360 -->
+<div class="offer-card flex-shrink-0 w-full md:w-[350px] overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Ngong Ping 360" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Time</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">342</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Ngong Ping 360</h3>
+<p class="text-gray-600 text-sm mb-3">Scenic cable car ride with panoramic views</p>
+<div class="flex items-center mb-3">
+<span class="text-gray-400 line-through mr-2">$45</span>
+<span class="text-primary font-bold text-xl">$35.95</span>
+<span class="ml-2 bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded">Save 20%</span>
+</div>
+<a href="https://fr.trip.com/travel-guide/attraction/hong-kong/ngong-ping-360-81947?curr=EUR&locale=fr-FR&scene=ticket" target="_blank" class="block w-full button-3d text-white text-center py-2 !rounded-button whitespace-nowrap font-medium">View Exclusive Offer</a>
+</div>
+</div>
+<!-- Offer Card 4 - Universal Studios Hollywood -->
+<div class="offer-card flex-shrink-0 w-full md:w-[350px] overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Universal Studios Hollywood" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Time</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">198</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Universal Studios Hollywood</h3>
+<p class="text-gray-600 text-sm mb-3">Movie magic and thrilling theme park rides</p>
+<div class="flex items-center mb-3">
+<span class="text-gray-400 line-through mr-2">$135</span>
+<span class="text-primary font-bold text-xl">$107.88</span>
+<span class="ml-2 bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded">Save 20%</span>
+</div>
+<a href="https://fr.trip.com/travel-guide/attraction/hong-kong/ngong-ping-360-81947?curr=EUR&locale=fr-FR&scene=ticket" target="_blank" class="block w-full button-3d text-white text-center py-2 !rounded-button whitespace-nowrap font-medium">View Exclusive Offer</a>
+</div>
+</div>
+<!-- Offer Card 5 - Disneyland Park -->
+<div class="offer-card flex-shrink-0 w-full md:w-[350px] overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Disneyland Park" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Time</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">375</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">Disneyland Park</h3>
+<p class="text-gray-600 text-sm mb-3">The happiest place on earth - Anaheim</p>
+<div class="flex items-center mb-3">
+<span class="text-gray-400 line-through mr-2">$175</span>
+<span class="text-primary font-bold text-xl">$138.76</span>
+<span class="ml-2 bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded">Save 21%</span>
+</div>
+<a href="https://fr.trip.com/travel-guide/attraction/anaheim/disneyland-park-california-10758975?curr=EUR&locale=fr-FR&scene=ticket" target="_blank" class="block w-full button-3d text-white text-center py-2 !rounded-button whitespace-nowrap font-medium">View Exclusive Offer</a>
+</div>
+</div>
+<!-- Offer Card 6 - London Eye -->
+<div class="offer-card flex-shrink-0 w-full md:w-[350px] overflow-hidden">
+<div class="relative">
+<img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="London Eye" class="w-full h-48 object-cover object-top">
+<div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">Limited Time</div>
+<div class="absolute bottom-3 left-3 bg-white bg-opacity-90 text-xs px-2 py-1 rounded flex items-center">
+<i class="ri-eye-line mr-1"></i>
+<span class="people-viewing-count">298</span>
+<span class="people-viewing-label"> people viewing</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="font-bold text-primary text-lg">London Eye</h3>
+<p class="text-gray-600 text-sm mb-3">Panoramic views of London from above</p>
+<div class="flex items-center mb-3">
+<span class="text-gray-400 line-through mr-2">$42</span>
+<span class="text-primary font-bold text-xl">$33.49</span>
+<span class="ml-2 bg-primary bg-opacity-10 text-primary text-xs px-2 py-1 rounded">Save 20%</span>
+</div>
+<a href="https://fr.trip.com/travel-guide/attraction/anaheim/disneyland-park-california-10758975?curr=EUR&locale=fr-FR&scene=ticket" target="_blank" class="block w-full button-3d text-white text-center py-2 !rounded-button whitespace-nowrap font-medium">View Exclusive Offer</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section id="contact-form" class="section-3d section-spacing">
+<div class="custom-container">
+<div class="text-center mb-12">
+<h2 class="text-xl font-bold text-primary mb-2">Contact Us</h2>
+<p class="text-gray-600 max-w-lg mx-auto text-xs">Have questions or need assistance? We're here to help you plan your perfect trip.</p>
+</div>
+<div class="max-w-2xl mx-auto">
+<form id="contactForm" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-primary text-sm font-medium mb-2">Full Name *</label>
+<input type="text" id="name" name="name" required class="w-full px-4 py-3 form-input-3d focus:outline-none">
+</div>
+<div>
+<label for="email" class="block text-primary text-sm font-medium mb-2">Email Address *</label>
+<input type="email" id="email" name="email" required class="w-full px-4 py-3 form-input-3d focus:outline-none">
+</div>
+</div>
+<div>
+<label for="subject" class="block text-primary text-sm font-medium mb-2">Subject *</label>
+<select id="subject" name="subject" required class="w-full px-4 py-3 form-input-3d focus:outline-none">
+<option value="">Select a subject</option>
+<option value="General Inquiry">General Inquiry</option>
+<option value="Booking Support">Booking Support</option>
+<option value="Technical Issue">Technical Issue</option>
+<option value="Partnership">Partnership</option>
+<option value="Feedback">Feedback</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div>
+<label for="message" class="block text-primary text-sm font-medium mb-2">Message *</label>
+<textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 form-input-3d focus:outline-none resize-none"></textarea>
+</div>
+<div class="text-center">
+<button type="submit" class="button-3d text-white px-8 py-3 !rounded-button whitespace-nowrap font-medium">
+Send Message
+</button>
+</div>
+</form>
+<div id="contactResult" class="mt-4 text-center text-sm"></div>
+<div class="mt-8 text-center">
+<p class="text-gray-600 text-sm">You can also reach us directly at: <a href="mailto:support@safarihoo.com" class="text-primary hover:underline">support@safarihoo.com</a></p>
+</div>
+</div>
+</div>
+</section>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value + '\nSujet: ' + form.subject.value
+  };
+  const resultDiv = document.getElementById('contactResult');
+  resultDiv.textContent = 'Envoi en cours...';
+  try {
+    const response = await fetch('https://safarihoo-backend.onrender.com/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await response.json();
+    if (result.success) {
+      resultDiv.textContent = result.message || 'Message envoyé !';
+      form.reset();
+    } else {
+      resultDiv.textContent = result.error || 'Erreur lors de l\'envoi.';
+    }
+  } catch (err) {
+    resultDiv.textContent = 'Erreur lors de l\'envoi du message.';
+  }
+});
+</script>
+<!-- Footer -->
+<footer class="safari-white pt-16 pb-8 section-spacing" style="max-width: 1100px; margin: 80px auto; border-radius: 20px;">
+<div class="custom-container">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-secondary mb-4 inline-block">Safarihoo</a>
+<p class="text-gray-600 mb-4">Your ultimate travel companion for discovering the world's most breathtaking destinations with exclusive deals and personalized recommendations.</p>
+<div class="flex space-x-4">
+<a href="https://www.facebook.com/share/15hPHLinfE/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://x.com/Safarihoo" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="https://www.youtube.com/@Safarihoo?sub_confirmation=1" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90">
+<i class="ri-youtube-fill"></i>
+</a>
+<a href="https://www.pinterest.com/safarihoo/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90">
+<i class="ri-pinterest-fill"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold text-primary mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-600 hover:text-primary">About Us</a></li>
+<li><a href="https://aviasales.tpm.li/LrJL8WFF" target="_blank" class="text-gray-600 hover:text-primary">Flights</a></li>
+<li><a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="text-gray-600 hover:text-primary">Hotels</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Vacation Packages</a></li>
+<li><a href="https://getrentacar.tpm.li/vioWZ86l" target="_blank" class="text-gray-600 hover:text-primary">Car Rentals</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Cruises</a></li>
+<li><a href="https://wegotrip.tpm.li/MiJxBGR8" target="_blank" class="text-gray-600 hover:text-primary">Activities</a></li>
+</ul>
+</div>
+<!-- Support -->
+<div>
+<h3 class="text-lg font-bold text-primary mb-4">Support</h3>
+<ul class="space-y-2">
+<li><a href="#contact-form" class="text-gray-600 hover:text-primary">Contact Us</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">FAQs</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Terms & Conditions</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Cancellation Policy</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Affiliate Program</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-bold text-primary mb-4">Subscribe to Our Newsletter</h3>
+<p class="text-gray-600 mb-4">Get exclusive travel deals, insider tips, and travel inspiration delivered monthly.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your email address" class="flex-1 px-4 py-2 border border-gray-300 rounded-l focus:outline-none focus:ring-1 focus:ring-primary">
+<button type="submit" class="bg-secondary hover:bg-opacity-90 text-white px-4 py-2 rounded-r whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+<div class="flex items-center space-x-3">
+<span class="text-gray-600 text-sm">We accept:</span>
+<div class="flex space-x-2">
+<i class="ri-visa-fill ri-lg text-gray-700"></i>
+<i class="ri-mastercard-fill ri-lg text-gray-700"></i>
+<i class="ri-paypal-fill ri-lg text-gray-700"></i>
+<i class="ri-american-express-fill ri-lg text-gray-700"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-600 text-sm mb-4 md:mb-0">© 2025 Safarihoo. All rights reserved.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-600 hover:text-primary text-sm">Privacy Policy</a>
+<a href="#" class="text-gray-600 hover:text-primary text-sm">Terms of Service</a>
+<a href="#" class="text-gray-600 hover:text-primary text-sm">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="search-tabs-script">
+document.addEventListener('DOMContentLoaded', function() {
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+tabBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+// Remove active class from all tabs
+tabBtns.forEach(b => b.classList.remove('active-tab'));
+tabContents.forEach(c => c.classList.add('hidden'));
+// Add active class to clicked tab
+btn.classList.add('active-tab');
+// Show corresponding content
+const tabId = btn.getAttribute('data-tab');
+document.getElementById(`${tabId}-tab`).classList.remove('hidden');
+});
+});
+});
+</script>
+<script id="offers-carousel-script">
+document.addEventListener('DOMContentLoaded', function() {
+const container = document.querySelector('.offers-container');
+const prevBtn = document.getElementById('prev-offer');
+const nextBtn = document.getElementById('next-offer');
+const cardWidth = 350 + 24; // card width + margin
+prevBtn.addEventListener('click', () => {
+container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+});
+nextBtn.addEventListener('click', () => {
+container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+});
+// Auto scroll
+let scrollInterval;
+function startAutoScroll() {
+scrollInterval = setInterval(() => {
+if (container.scrollLeft >= container.scrollWidth - container.clientWidth - 10) {
+container.scrollTo({ left: 0, behavior: 'smooth' });
+} else {
+container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+}
+}, 5000);
+}
+function stopAutoScroll() {
+clearInterval(scrollInterval);
+}
+startAutoScroll();
+container.addEventListener('mouseenter', stopAutoScroll);
+container.addEventListener('mouseleave', startAutoScroll);
+});
+</script>
+<script id="scroll-to-search-script">
+document.addEventListener('DOMContentLoaded', function() {
+const takeActionBtn = document.querySelector('a[href="#search-section"]');
+takeActionBtn.addEventListener('click', function(e) {
+e.preventDefault();
+const searchSection = document.getElementById('search-section');
+searchSection.scrollIntoView({ behavior: 'smooth' });
+});
+});
+</script>
+<!-- AI Chat Interface -->
+<div id="ai-chat-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+<div class="flex items-center justify-center min-h-screen p-2 sm:p-4">
+<div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] sm:max-h-[80vh] flex flex-col">
+<!-- Chat Header -->
+<div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-t-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+<i class="ri-robot-line text-xl"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold">Safarihoo AI Assistant</h3>
+<p class="text-sm opacity-90">Get personalized travel recommendations with exclusive affiliate deals</p>
+</div>
+</div>
+<button onclick="closeAIChat()" class="text-white hover:text-gray-200 text-2xl">
+<i class="ri-close-line"></i>
+</button>
+</div>
+</div>
+
+<!-- Chat Messages -->
+<div id="chat-messages" class="flex-1 overflow-y-auto p-6 space-y-4 max-h-96">
+<div class="flex items-start space-x-3">
+<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+<i class="ri-robot-line text-white text-sm"></i>
+</div>
+<div class="bg-gray-100 rounded-2xl px-4 py-3 max-w-[80%]">
+<p class="text-sm">👋 Hi! I'm your Safarihoo AI travel assistant. I can help you find the perfect destinations and services with exclusive deals from our trusted partners. What type of trip are you looking for?</p>
+</div>
+</div>
+</div>
+
+<!-- Chat Input -->
+<div class="border-t border-gray-200 p-6">
+<div class="flex space-x-2 sm:space-x-3">
+<input type="text" id="chat-input" placeholder="Describe your dream trip..." class="flex-1 px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+<button onclick="sendMessage()" class="bg-secondary hover:bg-opacity-90 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium text-sm">
+<i class="ri-send-plane-fill mr-1 sm:mr-2"></i><span class="hidden sm:inline">Send</span>
+</button>
+</div>
+<div class="mt-3 text-xs text-gray-500">
+💡 Try: "I want a beach vacation in Europe" or "Looking for adventure activities in Asia"
+</div>
+</div>
+</div>
+</div>
+
+<script id="ai-chat-script">
+function openAIChat() {
+document.getElementById('ai-chat-overlay').classList.remove('hidden');
+document.getElementById('chat-input').focus();
+}
+
+function closeAIChat() {
+document.getElementById('ai-chat-overlay').classList.add('hidden');
+}
+
+function sendMessage() {
+const input = document.getElementById('chat-input');
+const message = input.value.trim();
+if (!message) return;
+// Add user message
+addMessage(message, 'user');
+input.value = '';
+// Simulate AI response with affiliate recommendations
+setTimeout(() => {
+const aiResponse = generateAIResponse(message);
+addMessage(aiResponse, 'ai');
+}, 1000);
+}
+
+function addMessage(text, sender) {
+const messagesContainer = document.getElementById('chat-messages');
+const messageDiv = document.createElement('div');
+messageDiv.className = 'flex items-start space-x-3';
+if (sender === 'user') {
+messageDiv.innerHTML = `
+<div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+<i class="ri-user-line text-white text-sm"></i>
+</div>
+<div class="bg-secondary text-white rounded-2xl px-4 py-3 max-w-[80%] ml-auto">
+<p class="text-sm">${text}</p>
+</div>
+`;
+} else {
+messageDiv.innerHTML = `
+<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+<i class="ri-robot-line text-white text-sm"></i>
+</div>
+<div class="bg-gray-100 rounded-2xl px-4 py-3 max-w-[80%]">
+<p class="text-sm">${text}</p>
+</div>
+`;
+}
+messagesContainer.appendChild(messageDiv);
+messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+function generateAIResponse(userMessage) {
+const message = userMessage.toLowerCase();
+let response = '';
+// Flight recommendations
+if (message.includes('flight') || message.includes('fly') || message.includes('airplane')) {
+response = `✈️ Great! I found some amazing flight deals for you:\n\n` +
+`🌍 <a href="https://aviasales.tpm.li/LrJL8WFF" target="_blank" class="text-primary hover:underline font-medium">Search Flights</a> - Best prices on flights worldwide\n` +
+`🇺🇸 <a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHUS1" target="_blank" class="text-primary hover:underline font-medium">United States</a> - Starting from $818\n` +
+`🇦🇪 <a href="https://www.aviasales.com/?marker=569298.Zzcd82ce64f13f4761b5e1900-569298&params=FIHAE1" target="_blank" class="text-primary hover:underline font-medium">United Arab Emirates</a> - Starting from $408\n\n` +
+`Would you like me to help you find hotels or activities for your trip?`;
+}
+// Hotel recommendations
+else if (message.includes('hotel') || message.includes('accommodation') || message.includes('stay') || message.includes('room')) {
+response = `🏨 Perfect! Here are our top hotel partners with exclusive deals:\n\n` +
+`🏨 <a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="text-primary hover:underline font-medium">Search Hotels</a> - Best rates and free cancellation\n` +
+`🌟 Luxury hotels with breakfast included\n` +
+`💳 Secure booking with instant confirmation\n\n` +
+`Should I also help you find flights or activities?`;
+}
+// Car rental recommendations
+else if (message.includes('car') || message.includes('rental') || message.includes('drive') || message.includes('vehicle')) {
+response = `🚗 Excellent choice! Here are our trusted car rental partners:\n\n` +
+`🚗 <a href="https://getrentacar.tpm.li/vioWZ86l" target="_blank" class="text-primary hover:underline font-medium">Rent a Car</a> - Best prices worldwide\n` +
+`🚙 Economy to luxury vehicles available\n` +
+`🛡️ Full insurance coverage included\n` +
+`⛽ Flexible pickup/drop-off locations\n\n` +
+`Would you like me to help you find flights or hotels?`;
+}
+// Activity recommendations
+else if (message.includes('activity') || message.includes('tour') || message.includes('excursion') || message.includes('adventure')) {
+response = `🎯 Fantastic! Here are amazing activities and tours:\n\n` +
+`🎯 <a href="https://wegotrip.tpm.li/MiJxBGR8" target="_blank" class="text-primary hover:underline font-medium">Book Activities</a> - Unique experiences worldwide\n` +
+`🏔️ Outdoor adventures and cultural tours\n` +
+`🍽️ Food & drink experiences\n` +
+`🎨 Guided tours with local experts\n\n` +
+`Should I help you find accommodation or transportation?`;
+}
+// Beach vacation
+else if (message.includes('beach') || message.includes('ocean') || message.includes('sea') || message.includes('coast')) {
+response = `🏖️ Perfect beach getaway! Here are my recommendations:\n\n` +
+`✈️ <a href="https://aviasales.tpm.li/LrJL8WFF" target="_blank" class="text-primary hover:underline font-medium">Flights</a> to beach destinations\n` +
+`🏨 <a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="text-primary hover:underline font-medium">Beachfront Hotels</a> with ocean views\n` +
+`🎯 <a href="https://wegotrip.tpm.li/MiJxBGR8" target="_blank" class="text-primary hover:underline font-medium">Beach Activities</a> - snorkeling, sailing, sunset tours\n` +
+`🚗 <a href="https://getrentacar.tpm.li/vioWZ86l" target="_blank" class="text-primary hover:underline font-medium">Car Rental</a> to explore coastal areas\n\n` +
+`Which aspect would you like to book first?`;
+}
+// Adventure travel
+else if (message.includes('adventure') || message.includes('hiking') || message.includes('mountain') || message.includes('explore')) {
+response = `🏔️ Adventure awaits! Here are my recommendations:\n\n` +
+`✈️ <a href="https://aviasales.tpm.li/LrJL8WFF" target="_blank" class="text-primary hover:underline font-medium">Flights</a> to adventure destinations\n` +
+`🏨 <a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="text-primary hover:underline font-medium">Adventure Hotels</a> near nature\n` +
+`🎯 <a href="https://wegotrip.tpm.li/MiJxBGR8" target="_blank" class="text-primary hover:underline font-medium">Adventure Tours</a> - hiking, climbing, wildlife\n` +
+`🚗 <a href="https://getrentacar.tpm.li/vioWZ86l" target="_blank" class="text-primary hover:underline font-medium">4x4 Rental</a> for off-road adventures\n\n` +
+`Ready to start your adventure?`;
+}
+// City break
+else if (message.includes('city') || message.includes('urban') || message.includes('culture') || message.includes('museum')) {
+response = `🏙️ City break recommendations:\n\n` +
+`✈️ <a href="https://aviasales.tpm.li/LrJL8WFF" target="_blank" class="text-primary hover:underline font-medium">City Flights</a> to major destinations\n` +
+`🏨 <a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="text-primary hover:underline font-medium">City Hotels</a> in prime locations\n` +
+`🎯 <a href="https://wegotrip.tpm.li/MiJxBGR8" target="_blank" class="text-primary hover:underline font-medium">City Tours</a> - museums, landmarks, food tours\n` +
+`🚗 <a href="https://getrentacar.tpm.li/vioWZ86l" target="_blank" class="text-primary hover:underline font-medium">Car Rental</a> for day trips\n\n` +
+`Which city interests you most?`;
+}
+// Default response
+else {
+response = `🌟 I can help you plan the perfect trip! Here are our services:\n\n` +
+`✈️ <a href="https://aviasales.tpm.li/LrJL8WFF" target="_blank" class="text-primary hover:underline font-medium">Flights</a> - Best prices worldwide\n` +
+`🏨 <a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="text-primary hover:underline font-medium">Hotels</a> - Exclusive deals\n` +
+`🚗 <a href="https://getrentacar.tpm.li/vioWZ86l" target="_blank" class="text-primary hover:underline font-medium">Car Rentals</a> - Flexible options\n` +
+`🎯 <a href="https://wegotrip.tpm.li/MiJxBGR8" target="_blank" class="text-primary hover:underline font-medium">Activities</a> - Unique experiences\n\n` +
+`Tell me more about your travel preferences!`;
+}
+return response;
+}
+// Enter key to send message
+document.addEventListener('DOMContentLoaded', function() {
+const chatInput = document.getElementById('chat-input');
+chatInput.addEventListener('keypress', function(e) {
+if (e.key === 'Enter') {
+sendMessage();
+}
+});
+});
+</script>
+
+<!-- Hotel Map Modal -->
+<div id="hotel-map-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+<div class="flex items-center justify-center min-h-screen p-2 sm:p-4">
+<div class="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[95vh] sm:max-h-[90vh] flex flex-col">
+<!-- Modal Header -->
+<div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-t-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+<i class="ri-map-pin-line text-xl"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold">Interactive Hotel Map</h3>
+<p class="text-sm opacity-90">Explore hotels worldwide with real-time availability</p>
+</div>
+</div>
+<button onclick="closeHotelMap()" class="text-white hover:text-gray-200 text-2xl">
+<i class="ri-close-line"></i>
+</button>
+</div>
+</div>
+
+<!-- Map Content -->
+<div class="flex-1 p-6">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 h-full">
+<!-- Map -->
+<div class="lg:col-span-2">
+<div class="bg-gray-100 rounded-xl overflow-hidden h-64 sm:h-96">
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986532929688!3d40.69714941978941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sfr!4v1700841234567!5m2!1sen!2sfr" 
+width="100%" 
+height="100%" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</div>
+
+<!-- Hotel List -->
+<div class="lg:col-span-1">
+<div class="bg-gray-50 rounded-xl p-3 sm:p-4 h-64 sm:h-96 overflow-y-auto">
+<h4 class="font-bold text-primary mb-4">Featured Hotels</h4>
+<div class="space-y-4">
+<!-- Hotel 1 -->
+<div class="bg-white rounded-lg p-3 shadow-sm">
+<div class="flex items-start space-x-3">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+<i class="ri-hotel-line text-primary"></i>
+</div>
+<div class="flex-1">
+<h5 class="font-medium text-sm">The Plaza Hotel</h5>
+<p class="text-xs text-gray-600">New York, NY</p>
+<div class="flex items-center mt-1">
+<span class="text-xs text-secondary font-bold">$450/night</span>
+<span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Available</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Hotel 2 -->
+<div class="bg-white rounded-lg p-3 shadow-sm">
+<div class="flex items-start space-x-3">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+<i class="ri-hotel-line text-primary"></i>
+</div>
+<div class="flex-1">
+<h5 class="font-medium text-sm">Waldorf Astoria</h5>
+<p class="text-xs text-gray-600">New York, NY</p>
+<div class="flex items-center mt-1">
+<span class="text-xs text-secondary font-bold">$380/night</span>
+<span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Available</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Hotel 3 -->
+<div class="bg-white rounded-lg p-3 shadow-sm">
+<div class="flex items-start space-x-3">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+<i class="ri-hotel-line text-primary"></i>
+</div>
+<div class="flex-1">
+<h5 class="font-medium text-sm">The Ritz-Carlton</h5>
+<p class="text-xs text-gray-600">New York, NY</p>
+<div class="flex items-center mt-1">
+<span class="text-xs text-secondary font-bold">$520/night</span>
+<span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Available</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Hotel 4 -->
+<div class="bg-white rounded-lg p-3 shadow-sm">
+<div class="flex items-start space-x-3">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+<i class="ri-hotel-line text-primary"></i>
+</div>
+<div class="flex-1">
+<h5 class="font-medium text-sm">Marriott Marquis</h5>
+<p class="text-xs text-gray-600">New York, NY</p>
+<div class="flex items-center mt-1">
+<span class="text-xs text-secondary font-bold">$280/night</span>
+<span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Available</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal Footer -->
+<div class="border-t border-gray-200 p-6">
+<div class="flex justify-between items-center">
+<div class="text-sm text-gray-600">
+💡 Click on any hotel to view detailed information and book
+</div>
+<a href="https://hotellook.tpm.li/b7olhaGZ" target="_blank" class="bg-secondary hover:bg-opacity-90 text-white px-6 py-2 rounded-lg font-medium">
+<i class="ri-hotel-line mr-2"></i>Search All Hotels
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script id="hotel-map-script">
+function openHotelMap() {
+document.getElementById('hotel-map-modal').classList.remove('hidden');
+}
+
+function closeHotelMap() {
+document.getElementById('hotel-map-modal').classList.add('hidden');
+}
+
+// Close modal when clicking outside
+document.addEventListener('DOMContentLoaded', function() {
+const modal = document.getElementById('hotel-map-modal');
+modal.addEventListener('click', function(e) {
+if (e.target === modal) {
+closeHotelMap();
+}
+});
+});
+</script>
+
+<script id="search-widget-script">
+// Fonction pour convertir les villes en codes IATA (liste étendue)
+function getIATACode(city, callback) {
+  const map = {// Afrique du Nord
+'alger': 'ALG', 'oran': 'ORN', 'constantine': 'CZL',
+'le caire': 'CAI', 'alexandrie': 'HBE', 'sharm el-sheikh': 'SSH',
+'tripoli': 'TIP', 'benghazi': 'BEN',
+'casablanca': 'CMN', 'marrakech': 'RAK', 'tanger': 'TNG',
+'tunis': 'TUN', 'djerba': 'DJE',
+
+// Afrique de l'Ouest
+'cotonou': 'COO', 'ouagadougou': 'OUA',
+'praia': 'RAI', 'sal': 'SID',
+'abidjan': 'ABJ', 'banjul': 'BJL', 'accra': 'ACC', 'conakry': 'CKY',
+'bissau': 'OXB', 'monrovia': 'ROB', 'bamako': 'BKO', 'nouakchott': 'NKC',
+'niamey': 'NIM', 'lagos': 'LOS', 'abuja': 'ABV', 'port harcourt': 'PHC',
+'dakar': 'DSS', 'freetown': 'FNA', 'lomé': 'LFW',
+'kano': 'KAN', 'kaduna': 'KAD', 'ibadan': 'IBA', 'kumasi': 'KMS', 'tamale': 'TML',
+'bobo-dioulasso': 'BOY', 'sikasso': 'KSS', 'kankan': 'KNN',
+
+// Afrique Centrale
+'douala': 'DLA', 'yaoundé': 'NSI', 'libreville': 'LBV', 'malabo': 'SSG',
+'brazzaville': 'BZV', 'pointe-noire': 'PNR', 'kinshasa': 'FIH', 'lubumbashi': 'FBM',
+'n\'djamena': 'NDJ', 'bangui': 'BGF',  // <-- Ajouter cette ligne
+
+// Afrique de l'Est
+'bujumbura': 'BJM', 'djibouti': 'JIB', 'asmara': 'ASM',
+'addis-abeba': 'ADD', 'nairobi': 'NBO', 'mombasa': 'MBA', 'entebbe': 'EBB',
+'kigali': 'KGL', 'mogadiscio': 'MGQ', 'khartoum': 'KRT', 'juba': 'JUB',
+'dar es salam': 'DAR', 'zanzibar': 'ZNZ',
+
+// Afrique Australe
+'luanda': 'LAD', 'gaborone': 'GBE', 'manzini': 'SHO', 'maseru': 'MSU',
+'antananarivo': 'TNR', 'nosy be': 'NOS', 'lilongwe': 'LLW', 'port-louis': 'MRU',
+'maputo': 'MPM', 'windhoek': 'WDH', 'victoria': 'SEZ', 'lusaka': 'LUN', 'harare': 'HRE',// Europe de l'Ouest
+'berlin': 'BER', 'francfort': 'FRA', 'munich': 'MUC', 'désseldorf': 'DUS', 'hambourg': 'HAM',
+'vienne': 'VIE', 'bruxelles': 'BRU',
+'paris': 'CDG', 'paris orly': 'ORY', 'lyon': 'LYS', 'marseille': 'MRS', 'nice': 'NCE',
+'amsterdam': 'AMS', 'zurich': 'ZRH', 'genève': 'GVA', 'luxembourg': 'LUX',
+'nantes': 'NTE', 'brest': 'BES', 'toulon': 'TLN', 'perpignan': 'PGF', 'biarritz': 'BIQ',
+'clermont-ferrand': 'CFE', 'grenoble': 'GNB', 'dijon': 'DIJ', 'reims': 'RHE', 'tours': 'TUF',
+'poitiers': 'PIS', 'limoges': 'LIG', 'bergerac': 'EGC', 'béziers': 'BZR', 'carcassonne': 'CCF',
+'lourdes': 'LDE', 'bastia': 'BIA', 'calvi': 'CLY', 'figari': 'FSC', 'ajaccio': 'AJA',
+
+// Europe du Nord
+'copenhague': 'CPH', 'helsinki': 'HEL', 'oslo': 'OSL', 'stockholm': 'ARN', 'reykjavik': 'KEF',
+'dublin': 'DUB', 'londres heathrow': 'LHR', 'londres gatwick': 'LGW', 'manchester': 'MAN', 'édimbourg': 'EDI',
+
+// Europe du Sud
+'madrid': 'MAD', 'barcelone': 'BCN', 'palma de majorque': 'PMI', 'malaga': 'AGP',
+'lisbonne': 'LIS', 'porto': 'OPO', 'faro': 'FAO',
+'rome': 'FCO', 'milan': 'MXP', 'venise': 'VCE', 'naples': 'NAP',
+'athénes': 'ATH', 'thessalonique': 'SKG', 'héraklion': 'HER', 'la valette': 'MLA', 'larnaca': 'LCA',
+
+// Europe de l'Est
+'varsovie': 'WAW', 'prague': 'PRG', 'budapest': 'BUD', 'bratislava': 'BTS', 'ljubljana': 'LJU',
+'zagreb': 'ZAG', 'split': 'SPU', 'dubrovnik': 'DBV', 'belgrade': 'BEG', 'podgorica': 'TGD', 'tirana': 'TIA',
+'bucarest': 'OTP', 'sofia': 'SOF', 'kiev': 'KBP', 'moscou': 'SVO', 'domodedovo': 'DME', 'minsk': 'MSQ',
+'vilnius': 'VNO', 'riga': 'RIX', 'tallinn': 'TLL',
+
+// Autres territoires européens
+'gibraltar': 'GIB', 'végar': 'FAE', 'nuuk': 'GOH',// Canada
+'calgary': 'YYC', 'edmonton': 'YEG', 'halifax': 'YHZ', 'montréal': 'YUL', 'ottawa': 'YOW',
+'québec': 'YQB', 'toronto': 'YYZ', 'vancouver': 'YVR', 'winnipeg': 'YWG',
+'victoria': 'YYJ', 'kelowna': 'YLW', 'prince george': 'YXS', 'whitehorse': 'YXY', 'yellowknife': 'YZF',
+'iqaluit': 'YFB', 'saskatoon': 'YXE', 'regina': 'YQR', 'thunder bay': 'YQT', 'london': 'YXU',
+'windsor': 'YQG', 'kingston': 'YGK', 'sudbury': 'YSB', 'moncton': 'YQM', 'saint john': 'YSJ',
+'fredericton': 'YFC', 'charlottetown': 'YYG', 'st johns': 'YYT', 'gander': 'YQX',
+
+// États-Unis (principaux hubs)
+'atlanta': 'ATL', 'boston': 'BOS', 'charlotte': 'CLT', 'chicago': 'ORD', 'dallas': 'DFW',
+'denver': 'DEN', 'detroit': 'DTW', 'houston': 'IAH', 'los angeles': 'LAX', 'miami': 'MIA',
+'new york': 'JFK', 'newark': 'EWR', 'orlando': 'MCO', 'philadelphie': 'PHL', 'phoenix': 'PHX',
+'san francisco': 'SFO', 'seattle': 'SEA', 'washington': 'IAD',
+
+// Autres aéroports US
+'anchorage': 'ANC', 'baltimore': 'BWI', 'cleveland': 'CLE', 'fort lauderdale': 'FLL', 'honolulu': 'HNL',
+'las vegas': 'LAS', 'minneapolis': 'MSP', 'nashville': 'BNA', 'new orleans': 'MSY', 'portland': 'PDX',
+'salt lake city': 'SLC', 'san diego': 'SAN', 'tampa': 'TPA',
+
+// Mexique
+'cancén': 'CUN', 'guadalajara': 'GDL', 'mexico': 'MEX', 'monterrey': 'MTY', 'puerto vallarta': 'PVR',
+'san josé del cabo': 'SJD', 'tijuana': 'TIJ',
+
+// Caraïbes
+'nassau': 'NAS', 'la havane': 'HAV', 'varadero': 'VRA', 'punta cana': 'PUJ', 'saint-domingue': 'SDQ',
+'kingston': 'KIN', 'montego bay': 'MBJ', 'san juan': 'SJU',
+
+// Amérique Centrale
+'san josé': 'SJO', 'guatemala city': 'GUA', 'tegucigalpa': 'TGU', 'panama city': 'PTY',
+
+// Amérique du Sud
+'buenos aires': 'EZE', 'aeroparque': 'AEP', 'cérdoba': 'COR', 'mendoza': 'MDZ', 'rosario': 'ROS',
+'la paz': 'LPB', 'santa cruz': 'VVI', 'belo horizonte': 'CNF', 'brasilia': 'BSB', 'curitiba': 'CWB',
+'fortaleza': 'FOR', 'manaus': 'MAO', 'porto alegre': 'POA', 'recife': 'REC', 'rio de janeiro': 'GIG',
+'salvador': 'SSA', 'são paulo': 'GRU', 'congonhas': 'CGH', 'antofagasta': 'ANF', 'concepción': 'CCP',
+'puerto montt': 'PMC', 'punta arenas': 'PUQ', 'santiago': 'SCL', 'barranquilla': 'BAQ', 'bogotá': 'BOG',
+'cali': 'CLO', 'cartagena': 'CTG', 'medellín': 'MDE', 'guayaquil': 'GYE', 'quito': 'UIO', 'cayenne': 'CAY',
+'georgetown': 'GEO', 'asunción': 'ASU', 'arequipa': 'AQP', 'cusco': 'CUZ', 'lima': 'LIM', 'trujillo': 'TRU',
+'paramaribo': 'PBM', 'montevideo': 'MVD', 'punta del este': 'PDP', 'caracas': 'CCS', 'maracaibo': 'MAR',
+'valencia': 'VLN',
+'campo grande': 'CGR', 'cuiabá': 'CGB', 'goiânia': 'GYN', 'palmas': 'PMW', 'natal': 'NAT', 'joão pessoa': 'JPA',
+'maceió': 'MCZ', 'aracaju': 'AJU', 'vitória': 'VIX', 'belém': 'BEL', 'macapá': 'MCP', 'porto velho': 'PVH',
+'rio branco': 'RBR', 'boavista': 'BVB', 'santarém': 'STM', 'petrópolis': 'PET', 'niterói': 'NIT',
+'florianópolis': 'FLN', 'joinville': 'JOI', 'blumenau': 'BNU', 'caxias do sul': 'CXJ', 'pelotas': 'PET',
+'passo fundo': 'PFB', 'santa maria': 'RIA', 'uruguaiana': 'URG', 'bagé': 'BGX', 'cruz alta': 'CZB',
+'chapecó': 'XAP', 'lages': 'LAJ', 'tubarão': 'TUB', 'criciúma': 'CCM', 'itajaí': 'IJJ', 'balneário camboriú': 'NVT',
+'porto seguro': 'BPS', 'ilhéus': 'IOS', 'itabuna': 'ITN', 'feira de santana': 'FEC', 'juazeiro do norte': 'JDO',
+'teresina': 'THE', 'picos': 'PCS', 'floriano': 'FLB', 'bom jesus da lapa': 'LAZ', 'barreiras': 'BRA',
+'vitória da conquista': 'VDC', 'ipatinga': 'IPN', 'uberlândia': 'UDI', 'uberaba': 'UBA', 'divinópolis': 'DIQ',
+'ponta grossa': 'PGZ', 'londrina': 'LDB', 'maringá': 'MGF', 'cascavel': 'CAC', 'foz do iguaçu': 'IGU',
+'joinville': 'JOI', 'blumenau': 'BNU', 'caxias do sul': 'CXJ', 'pelotas': 'PET', 'passo fundo': 'PFB',
+'santa maria': 'RIA', 'uruguaiana': 'URG', 'bagé': 'BGX', 'cruz alta': 'CZB', 'chapecó': 'XAP', 'lages': 'LAJ',
+'tubarão': 'TUB', 'criciúma': 'CCM', 'itajaí': 'IJJ', 'balneário camboriú': 'NVT', 'porto seguro': 'BPS',
+'ilhéus': 'IOS', 'itabuna': 'ITN', 'feira de santana': 'FEC', 'juazeiro do norte': 'JDO', 'teresina': 'THE',
+'picos': 'PCS', 'floriano': 'FLB', 'bom jesus da lapa': 'LAZ', 'barreiras': 'BRA', 'vitória da conquista': 'VDC',
+'ipatinga': 'IPN', 'uberlândia': 'UDI', 'uberaba': 'UBA', 'divinópolis': 'DIQ', 'ponta grossa': 'PGZ',
+'londrina': 'LDB', 'maringá': 'MGF', 'cascavel': 'CAC', 'foz do iguaçu': 'IGU', 'ciudad del este': 'AGT',
+'encarnación': 'ENO', 'pedro juan caballero': 'PJC', 'concepción': 'CIO', 'pilar': 'PIL', 'coronel oviedo': 'COV',
+'san lorenzo': 'SLO', 'caaguazú': 'CAG', 'villaricca': 'VRC', 'caazapá': 'CZA', 'paraguarí': 'PAG',
+'iguazú': 'IGR', 'posadas': 'PSS', 'resistencia': 'RES', 'formosa': 'FMA', 'santiago del estero': 'SDE',
+'san miguel de tucumán': 'TUC', 'salta': 'SLA', 'jujuy': 'JUJ', 'la rioja': 'IRJ', 'catamarca': 'CTC',
+'san juan': 'UAQ', 'mendoza': 'MDZ', 'san luis': 'LUQ', 'córdoba': 'COR', 'rosario': 'ROS', 'santa fe': 'SFN',
+'paraná': 'PRA', 'concordia': 'COC', 'gualeguaychú': 'GHU', 'victoria': 'VIC', 'diamante': 'DIA',
+'bahía blanca': 'BHI', 'neuquén': 'NQN', 'bariloche': 'BRC', 'esquel': 'EQS', 'comodoro rivadavia': 'CRD',
+'puerto madryn': 'PMY', 'trelew': 'REL', 'ushuaia': 'USH', 'el calafate': 'FTE', 'puerto iguazú': 'IGR',
+'puerto misiones': 'PSS', 'puerto formosa': 'FMA', 'puerto salta': 'SLA', 'puerto jujuy': 'JUJ',
+'puerto la rioja': 'IRJ', 'puerto catamarca': 'CTC', 'puerto san juan': 'UAQ', 'puerto san luis': 'LUQ',
+'puerto santa fe': 'SFN', 'puerto paraná': 'PRA', 'puerto concordia': 'COC', 'puerto gualeguaychú': 'GHU',
+'puerto victoria': 'VIC', 'puerto diamante': 'DIA', 'puerto bahía blanca': 'BHI', 'puerto neuquén': 'NQN',
+'puerto bariloche': 'BRC', 'puerto esquel': 'EQS', 'puerto comodoro rivadavia': 'CRD', 'puerto puerto madryn': 'PMY',
+'puerto trelew': 'REL', 'puerto ushuaia': 'USH', 'puerto el calafate': 'FTE',
+    'paris': 'CDG',
+    'london': 'LON',
+    'new york': 'NYC',
+    'tokyo': 'TYO',
+    'dubai': 'DXB',
+    'los angeles': 'LAX',
+    'san francisco': 'SFO',
+    'chicago': 'CHI',
+    'toronto': 'YTO',
+    'montreal': 'YMQ',
+    'addis ababa': 'ADD',
+    'ethiopia': 'ADD',
+    'frankfurt': 'FRA',
+    'berlin': 'BER',
+    'madrid': 'MAD',
+    'barcelona': 'BCN',
+    'rome': 'ROM',
+    'milan': 'MIL',
+    'amsterdam': 'AMS',
+    'brussels': 'BRU',
+    'geneva': 'GVA',
+    'zurich': 'ZRH',
+    'lisbon': 'LIS',
+    'porto': 'OPO',
+    'istanbul': 'IST',
+    'ankara': 'ESB',
+    'moscow': 'MOW',
+    'saint petersburg': 'LED',
+    'beijing': 'BJS',
+    'shanghai': 'SHA',
+    'hong kong': 'HKG',
+    'singapore': 'SIN',
+    'bangkok': 'BKK',
+    'delhi': 'DEL',
+    'mumbai': 'BOM',
+    'cairo': 'CAI',
+    'johannesburg': 'JNB',
+    'cape town': 'CPT',
+    'nairobi': 'NBO',
+    'lagos': 'LOS',
+    'casablanca': 'CMN',
+    'marrakech': 'RAK',
+    'sydney': 'SYD',
+    'melbourne': 'MEL',
+    'auckland': 'AKL',
+    'doha': 'DOH',
+    'abu dhabi': 'AUH',
+    'sharjah': 'SHJ',
+    'dubai': 'DXB',
+    'riyadh': 'RUH',
+    'jeddah': 'JED',
+    'bali': 'DPS',
+    'seoul': 'SEL',
+    'kuala lumpur': 'KUL',
+    'manila': 'MNL',
+    'jakarta': 'JKT',
+    'vienna': 'VIE',
+    'prague': 'PRG',
+    'budapest': 'BUD',
+    'warsaw': 'WAW',
+    'bucharest': 'BUH',
+    'athens': 'ATH',
+    'oslo': 'OSL',
+    'stockholm': 'STO',
+    'copenhagen': 'CPH',
+    'helsinki': 'HEL',
+    'dublin': 'DUB',
+    'edinburgh': 'EDI',
+    'glasgow': 'GLA',
+    'vienna': 'VIE',
+    'zurich': 'ZRH',
+    'geneva': 'GVA',
+    'venice': 'VCE',
+    'florence': 'FLR',
+    'naples': 'NAP',
+    'palermo': 'PMO',
+    'nice': 'NCE',
+    'lyon': 'LYS',
+    'marseille': 'MRS',
+    'toulouse': 'TLS',
+    'bordeaux': 'BOD',
+    'lille': 'LIL',
+    'strasbourg': 'SXB',
+    'brussels': 'BRU',
+    'luxembourg': 'LUX',
+    'monaco': 'MCM',
+    'andorra': 'LEU',
+    'geneva': 'GVA',
+    'zurich': 'ZRH',
+    'basel': 'BSL',
+    'bern': 'BRN',
+    'lausanne': 'QLS',
+    'interlaken': 'ZIN',
+    'lucerne': 'QLJ',
+    'munich': 'MUC',
+    'hamburg': 'HAM',
+    'dusseldorf': 'DUS',
+    'stuttgart': 'STR',
+    'cologne': 'CGN',
+    'frankfurt': 'FRA',
+    'berlin': 'BER',
+    'vienna': 'VIE',
+    'salzburg': 'SZG',
+    'innsbruck': 'INN',
+    'graz': 'GRZ',
+    'linz': 'LNZ',
+    'klagenfurt': 'KLU',
+    'zurich': 'ZRH',
+    'geneva': 'GVA',
+    'basel': 'BSL',
+    'bern': 'BRN',
+    'lausanne': 'QLS',
+    'lucerne': 'QLJ',
+    'interlaken': 'ZIN',
+    'amsterdam': 'AMS',
+    'rotterdam': 'RTM',
+    'eindhoven': 'EIN',
+    'utrecht': 'UTC',
+    'the hague': 'HAG',
+    'brussels': 'BRU',
+    'antwerp': 'ANR',
+    'ghent': 'GNE',
+    'bruges': 'BGU',
+    'liege': 'LGG',
+    'charleroi': 'CRL',
+    'luxembourg': 'LUX',
+    'oslo': 'OSL',
+    'bergen': 'BGO',
+    'stavanger': 'SVG',
+    'trondheim': 'TRD',
+    'tromso': 'TOS',
+    'stockholm': 'ARN',
+    'gothenburg': 'GOT',
+    'malmo': 'MMX',
+    'uppsala': 'QYX',
+    'helsinki': 'HEL',
+    'espoo': 'QEO',
+    'tampere': 'TMP',
+    'turku': 'TKU',
+    'oulu': 'OUL',
+    'copenhagen': 'CPH',
+    'aarhus': 'AAR',
+    'odense': 'ODE',
+    'aalborg': 'AAL',
+    'reykjavik': 'REK',
+    'akureyri': 'AEY',
+    'egilsstadir': 'EGS',
+    'isafjordur': 'IFJ',
+    'selfoss': 'SEJ',
+    'mosfellsbaer': 'MOS',
+    'kopavogur': 'KOP',
+    'hafnarfjordur': 'HAF',
+    'garðabær': 'GAR',
+    'akranes': 'AKR',
+    'selfoss': 'SEJ',
+    'húsavík': 'HZK',
+    'egilsstaðir': 'EGS',
+    'akureyri': 'AEY',
+    'isafjordur': 'IFJ',
+    'reykjavik': 'REK',
+    'athens': 'ATH',
+    'thessaloniki': 'SKG',
+    'heraklion': 'HER',
+    'patras': 'GPA',
+    'larissa': 'LRA',
+    'volos': 'VOL',
+    'ioannina': 'IOA',
+    'kavala': 'KVA',
+    'alexandroupoli': 'AXD',
+    'chania': 'CHQ',
+    'rhodes': 'RHO',
+    'kos': 'KGS',
+    'corfu': 'CFU',
+    'zakynthos': 'ZTH',
+    'santorini': 'JTR',
+    'mykonos': 'JMK',
+    'paros': 'PAS',
+    'naxos': 'JNX',
+    'milos': 'MLO',
+    'syros': 'JSY',
+    'samos': 'SMI',
+    'lesvos': 'MJT',
+    'chios': 'JKH',
+    'limnos': 'LXS',
+    'karpathos': 'AOK',
+    'kastoria': 'KSO',
+    'kalymnos': 'JKL',
+    'kasos': 'KSJ',
+    'kefalonia': 'EFL',
+    'kythira': 'KIT',
+    'leros': 'LRS',
+    'sitia': 'JSH',
+    'skiathos': 'JSI',
+    'skopelos': 'SKU',
+    'skyros': 'SKU',
+    'syros': 'JSY',
+    'zakynthos': 'ZTH',
+    'crete': 'HER',
+    'corfu': 'CFU',
+    'kos': 'KGS',
+    'rhodes': 'RHO',
+    'santorini': 'JTR',
+    'mykonos': 'JMK',
+    'naxos': 'JNX',
+    'paros': 'PAS',
+    'milos': 'MLO',
+    'syros': 'JSY',
+    'samos': 'SMI',
+    'lesvos': 'MJT',
+    'chios': 'JKH',
+    'limnos': 'LXS',
+    'karpathos': 'AOK',
+    'kastoria': 'KSO',
+    'kalymnos': 'JKL',
+    'kasos': 'KSJ',
+    'kefalonia': 'EFL',
+    'kythira': 'KIT',
+    'leros': 'LRS',
+    'sitia': 'JSH',
+    'skiathos': 'JSI',
+    'skopelos': 'SKU',
+    'skyros': 'SKU',
+    'syros': 'JSY',
+    'zakynthos': 'ZTH',
+    'brazzaville': 'BZV',
+    // Ajoutez d'autres villes si besoin
+    'adélaïde': 'ADL',
+    'brisbane': 'BNE',
+    'cairns': 'CNS',
+    'canberra': 'CBR',
+    'darwin': 'DRW',
+    'gold coast': 'OOL',
+    'hobart': 'HBA',
+    'melbourne': 'MEL',
+    'perth': 'PER',
+    'sydney': 'SYD',
+    'auckland': 'AKL',
+    'christchurch': 'CHC',
+    'dunedin': 'DUD',
+    'queenstown': 'ZQN',
+    'wellington': 'WLG',
+    'nadi': 'NAN',
+    'suva': 'SUV',
+    'port moresby': 'POM',
+    'honiara': 'HIR',
+    'port-vila': 'VLI',
+    'nouméa': 'NOU',
+    'papeete': 'PPT',
+    'apia': 'APW',
+    'pago pago': 'PPG',
+    'nuku\'alofa': 'TBU',
+    'rarotonga': 'RAR',
+    'agana': 'GUM',
+    'saipan': 'SPN',
+    'majuro': 'MAJ',
+    'pohnpei': 'PNI',
+    'chuuk': 'TKK',
+    'koror': 'ROR',
+    'tarawa': 'TRW',
+    'nauru': 'INU',
+    'funafuti': 'FUN',
+    // Asie
+    'pékin': 'PEK', 'shanghai': 'PVG', 'canton': 'CAN', 'shenzhen': 'SZX', 'chengdu': 'CTU', 'chongqing': 'CKG', 'xiamen': 'XMN', 'wuhan': 'WUH', 'hangzhou': 'HGH', 'kunming': 'KMG', 'harbin': 'HRB', 'qingdao': 'TAO',
+    'tokyo narita': 'NRT', 'tokyo haneda': 'HND', 'osaka': 'KIX', 'fukuoka': 'FUK', 'sapporo': 'CTS', 'nagoya': 'NGO', 'okinawa': 'OKA',
+    'séoul': 'ICN', 'busan': 'PUS', 'jeju': 'CJU',
+    'singapour': 'SIN',
+    'bangkok': 'BKK', 'phuket': 'HKT', 'chiang mai': 'CNX',
+    'kuala lumpur': 'KUL', 'penang': 'PEN', 'kota kinabalu': 'BKI',
+    'delhi': 'DEL', 'mumbai': 'BOM', 'bangalore': 'BLR', 'hyderabad': 'HYD', 'chennai': 'MAA', 'kolkata': 'CCU', 'ahmedabad': 'AMD', 'kochi': 'COK', 'goa': 'GOI',
+    'jakarta': 'CGK', 'bali': 'DPS', 'surabaya': 'SUB', 'medan': 'KNO',
+    'manille': 'MNL', 'cebu': 'CEB', 'davao': 'DVO',
+    'taipei': 'TPE', 'hong kong': 'HKG', 'macao': 'MFM',
+    'hanoï': 'HAN', 'ho chi minh-ville': 'SGN', 'da nang': 'DAD',
+    'ulaanbaatar': 'ULN', 'almaty': 'ALA', 'astana': 'NQZ', 'tashkent': 'TAS',
+    'colombo': 'CMB', 'katmandou': 'KTM',
+    'islamabad': 'ISB', 'karachi': 'KHI', 'lahore': 'LHE',
+    'tbilissi': 'TBS', 'erevan': 'EVN', 'bakou': 'GYD',
+    'dubaï': 'DXB', 'abou dabi': 'AUH', 'doha': 'DOH', 'riyad': 'RUH', 'djeddah': 'JED', 'mascate': 'MCT',
+    'amman': 'AMM', 'tel aviv': 'TLV', 'beyrouth': 'BEY', 'téhéran': 'IKA', 'bagdad': 'BGW',
+  };
+  const cityKey = city.trim().toLowerCase().split(',')[0];
+  if (map[cityKey]) {
+    callback(map[cityKey]);
+    return;
+  }
+  // Si la ville n'est pas dans la liste, interroger l'API aviationstack
+  // Remplacez 'YOUR_ACCESS_KEY' par votre clé API gratuite aviationstack
+  const accessKey = '0bb1b77cd10582869cf9e05fb3eb442b'; // <-- Clé API aviationstack fournie
+  fetch(`https://api.aviationstack.com/v1/airports?access_key=${accessKey}&search=${encodeURIComponent(city)}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data.length > 0) {
+        // Prendre le premier résultat
+        callback(data.data[0].iata_code || city.trim().toUpperCase());
+      } else {
+        callback(city.trim().toUpperCase()); // Fallback
+      }
+    })
+    .catch(() => {
+      callback(city.trim().toUpperCase());
+    });
+}
+
+// Modification de la fonction openSearchWidget pour gérer l'asynchronicité
+function openSearchWidget() {
+  const cityInputs = document.querySelectorAll('#flights-tab input[placeholder="City or Airport"]');
+  const from = cityInputs[0] ? cityInputs[0].value.trim() : '';
+  const to = cityInputs[1] ? cityInputs[1].value.trim() : '';
+  const departure = document.querySelector('#flights-tab input[type="date"]').value;
+  const returnDate = document.querySelectorAll('#flights-tab input[type="date"]')[1].value;
+  const passengers = document.querySelector('#flights-tab select').selectedIndex + 1;
+  const checkboxes = document.querySelectorAll('#flights-tab input[type="checkbox"]');
+  const directOnly = checkboxes[0] && checkboxes[0].checked;
+  const flexibleDates = checkboxes[1] && checkboxes[1].checked;
+  let errorDiv = document.getElementById('flight-search-error');
+  if (!errorDiv) {
+    errorDiv = document.createElement('div');
+    errorDiv.id = 'flight-search-error';
+    errorDiv.style.color = 'red';
+    errorDiv.style.margin = '10px 0';
+    errorDiv.style.textAlign = 'center';
+    const parent = document.querySelector('#flights-tab');
+    parent.appendChild(errorDiv);
+  }
+  if (!from || !to || !departure) {
+    errorDiv.textContent = 'Veuillez remplir tous les champs obligatoires (Départ, Arrivée, Date de départ).';
+    return;
+  }
+  errorDiv.textContent = '';
+  // Conversion en code IATA asynchrone
+  getIATACode(from, function(fromIATA) {
+    getIATACode(to, function(toIATA) {
+      // Format des dates pour Aviasales (JJMM)
+      function formatDateAviasales(dateStr) {
+        if (!dateStr) return '';
+        const d = new Date(dateStr);
+        const day = String(d.getDate()).padStart(2, '0');
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        return day + month;
+      }
+      const departDate = formatDateAviasales(departure);
+      const retDate = formatDateAviasales(returnDate);
+      let searchPath = `${fromIATA}${departDate}${toIATA}`;
+      if (retDate) searchPath += retDate;
+      searchPath += passengers;
+      const marker = '569298.Zzaa3dc778c4ce4a07933554f-569298';
+      let url = `https://www.aviasales.com/search/${searchPath}?marker=${marker}`;
+      if (directOnly) url += '&direct=true';
+      if (flexibleDates) url += '&flexible_dates=true';
+      // Vérification basique du code IATA
+      if (fromIATA.length !== 3 || toIATA.length !== 3) {
+        errorDiv.textContent = "Ville ou aéroport non reconnu. Veuillez vérifier l'orthographe.";
+        return;
+      }
+      window.open(url, '_blank');
+    });
+  });
+}
+
+// Fonction pour obtenir le cityId Hotellook à partir du nom de la ville
+async function getCityIdFromHotellook(cityName) {
+  const url = `https://engine.hotellook.com/api/v2/lookup.json?query=${encodeURIComponent(cityName)}&lang=en&lookFor=city&limit=1`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    if (data && data.cities && data.cities.length > 0) {
+      return data.cities[0].id;
+    }
+  } catch (e) {
+    // Erreur silencieuse
+  }
+  return '';
+}
+
+// Modification de la fonction openHotelSearch pour utiliser le cityId dynamique
+async function openHotelSearch() {
+  // Récupérer les valeurs du formulaire
+  const destination = document.querySelector('#hotels-tab input[placeholder="City or Hotel"]').value.trim();
+  const guestsSelect = document.querySelector('#hotels-tab select');
+  const guestsText = guestsSelect.options[guestsSelect.selectedIndex].text;
+  let adults = 2, children = 0;
+  // Extraction simple du nombre d'adultes et d'enfants
+  const match = guestsText.match(/(\d+) Adult/);
+  if (match) adults = parseInt(match[1]);
+  const matchChild = guestsText.match(/(\d+) Child/);
+  if (matchChild) children = parseInt(matchChild[1]);
+  const checkIn = document.querySelectorAll('#hotels-tab input[type="date"]')[0].value;
+  const checkOut = document.querySelectorAll('#hotels-tab input[type="date"]')[1].value;
+
+  // Sélecteur pour afficher les erreurs
+  let errorDiv = document.getElementById('hotel-search-error');
+  if (!errorDiv) {
+    errorDiv = document.createElement('div');
+    errorDiv.id = 'hotel-search-error';
+    errorDiv.style.color = 'red';
+    errorDiv.style.margin = '10px 0';
+    errorDiv.style.textAlign = 'center';
+    const parent = document.querySelector('#hotels-tab');
+    parent.appendChild(errorDiv);
+  }
+
+  // Validation des champs
+  if (!destination || !checkIn || !checkOut) {
+    errorDiv.textContent = 'Veuillez remplir tous les champs obligatoires (Destination, Check-in, Check-out).';
+    return;
+  }
+  errorDiv.textContent = '';
+
+  // cityId dynamique via API
+  let cityId = await getCityIdFromHotellook(destination);
+
+  // Marker d'affiliation
+  const marker = '569298.Zza148708a491c44e5820a1bb-126017';
+
+  // Construire l'URL Hotellook au format attendu
+  let url = `https://search.hotellook.com/hotels?adults=${adults}` +
+    `&checkIn=${checkIn}` +
+    `&checkOut=${checkOut}` +
+    `&children=${children}` +
+    `&cityId=${cityId}` +
+    `&currency=rub` +
+    `&destination=${encodeURIComponent(destination)}` +
+    `&language=en_us` +
+    `&marker=${marker}`;
+  window.open(url, '_blank');
+}
+
+// Correction de la fonction openCarSearch pour robustesse
+function openCarSearch() {
+  const pickup = document.querySelector('#cars-tab input[placeholder="City or Airport"]').value.trim();
+  const dropoff = document.querySelectorAll('#cars-tab input[placeholder="City or Airport"]')[1].value.trim();
+  const pickupDate = document.querySelectorAll('#cars-tab input[type="date"]')[0].value;
+  const dropoffDate = document.querySelectorAll('#cars-tab input[type="date"]')[1].value;
+
+  let errorDiv = document.getElementById('car-search-error');
+  if (!errorDiv) {
+    errorDiv = document.createElement('div');
+    errorDiv.id = 'car-search-error';
+    errorDiv.style.color = 'red';
+    errorDiv.style.margin = '10px 0';
+    errorDiv.style.textAlign = 'center';
+    const parent = document.querySelector('#cars-tab');
+    parent.appendChild(errorDiv);
+  }
+
+  if (!pickup || !dropoff || !pickupDate || !dropoffDate) {
+    errorDiv.textContent = 'Veuillez remplir tous les champs obligatoires (Lieu de prise en charge, Lieu de retour, Dates).';
+    return;
+  }
+  errorDiv.textContent = '';
+
+  function formatDateCar(dateStr) {
+    if (!dateStr) return '';
+    const d = new Date(dateStr);
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+    return `${day}.${month}.${year}`;
+  }
+  const pickupDateFormatted = formatDateCar(pickupDate);
+  const dropoffDateFormatted = formatDateCar(dropoffDate);
+
+  const track_id = '58bb755d47684152a20cc9491-569298';
+
+  let url = `https://getrentacar.com/fr/location-voiture/request?vehicleSegment=cars` +
+    `&pickup[location]=${encodeURIComponent(pickup + ', France')}` +
+    `&pickup[date]=${pickupDateFormatted}` +
+    `&return[date]=${dropoffDateFormatted}` +
+    `&track_id=${track_id}` +
+    `&utm_campaign=partner&utm_medium=partner_cpa&utm_source=travelpayouts`;
+
+  window.open(url, '_blank');
+}
+
+// Correction de la fonction openActivitySearch pour robustesse
+function openActivitySearch() {
+  const destination = document.querySelector('#activities-tab input[placeholder="City or Attraction"]').value.trim();
+  const date = document.querySelector('#activities-tab input[type="date"]').value;
+  const type = document.querySelector('#activities-tab select').value;
+  const participantsSelect = document.querySelectorAll('#activities-tab select')[1];
+  const participantsText = participantsSelect.options[participantsSelect.selectedIndex].text;
+  let participants = 1;
+  const match = participantsText.match(/(\d+)/);
+  if (match) participants = parseInt(match[1]);
+
+  let errorDiv = document.getElementById('activity-search-error');
+  if (!errorDiv) {
+    errorDiv = document.createElement('div');
+    errorDiv.id = 'activity-search-error';
+    errorDiv.style.color = 'red';
+    errorDiv.style.margin = '10px 0';
+    errorDiv.style.textAlign = 'center';
+    const parent = document.querySelector('#activities-tab');
+    parent.appendChild(errorDiv);
+  }
+
+  if (!destination || !date) {
+    errorDiv.textContent = 'Veuillez remplir tous les champs obligatoires (Destination, Date).';
+    return;
+  }
+  errorDiv.textContent = '';
+
+  let url = `https://wegotrip.tpm.li/MiJxBGR8?city=${encodeURIComponent(destination)}&date=${date}&type=${encodeURIComponent(type)}&participants=${participants}`;
+  window.open(url, '_blank');
+}
+</script>
+<script id="autocomplete-script">
+// Liste de 10 destinations populaires (peut être adaptée)
+const DESTINATIONS = [
+  "Paris, France",
+  "New York, USA",
+  "Tokyo, Japan",
+  "London, UK",
+  "Dubai, UAE",
+  "Rome, Italy",
+  "Bangkok, Thailand",
+  "Barcelona, Spain",
+  "Istanbul, Turkey",
+  "Bali, Indonesia"
+];
+
+function setupAutocomplete(inputSelector) {
+  document.querySelectorAll(inputSelector).forEach(input => {
+    // Création du conteneur de suggestions
+    let suggestionBox = document.createElement('div');
+    suggestionBox.className = 'autocomplete-suggestions bg-white border border-gray-200 rounded shadow-lg absolute z-50 w-full max-h-48 overflow-y-auto';
+    suggestionBox.style.display = 'none';
+    suggestionBox.style.top = '100%';
+    suggestionBox.style.left = '0';
+    suggestionBox.style.right = '0';
+    suggestionBox.style.position = 'absolute';
+    input.parentNode.appendChild(suggestionBox);
+
+    // Positionnement relatif du parent
+    input.parentNode.style.position = 'relative';
+
+    input.addEventListener('input', function() {
+      const value = this.value.trim().toLowerCase();
+      suggestionBox.innerHTML = '';
+      if (!value) {
+        suggestionBox.style.display = 'none';
+        return;
+      }
+      // Filtrer uniquement les destinations qui COMMENCENT par la saisie
+      const matches = DESTINATIONS.filter(dest => dest.toLowerCase().startsWith(value)).slice(0, 10);
+      if (matches.length === 0) {
+        suggestionBox.style.display = 'none';
+        return;
+      }
+      matches.forEach(dest => {
+        const item = document.createElement('div');
+        item.className = 'px-3 py-2 cursor-pointer hover:bg-primary hover:text-white text-sm';
+        item.textContent = dest;
+        item.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          input.value = dest;
+          suggestionBox.style.display = 'none';
+          input.dispatchEvent(new Event('change'));
+        });
+        suggestionBox.appendChild(item);
+      });
+      suggestionBox.style.display = 'block';
+    });
+
+    // Cacher les suggestions si on clique ailleurs
+    document.addEventListener('mousedown', function(e) {
+      if (!suggestionBox.contains(e.target) && e.target !== input) {
+        suggestionBox.style.display = 'none';
+      }
+    });
+
+    // Navigation clavier (flèches + entrée)
+    input.addEventListener('keydown', function(e) {
+      const items = suggestionBox.querySelectorAll('div');
+      let idx = Array.from(items).findIndex(item => item.classList.contains('bg-primary'));
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (items.length) {
+          if (idx >= 0) items[idx].classList.remove('bg-primary', 'text-white');
+          idx = (idx + 1) % items.length;
+          items[idx].classList.add('bg-primary', 'text-white');
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (items.length) {
+          if (idx >= 0) items[idx].classList.remove('bg-primary', 'text-white');
+          idx = (idx - 1 + items.length) % items.length;
+          items[idx].classList.add('bg-primary', 'text-white');
+        }
+      } else if (e.key === 'Enter') {
+        if (idx >= 0 && items.length) {
+          e.preventDefault();
+          items[idx].dispatchEvent(new Event('mousedown'));
+        }
+      }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Vols : "Ville ou Aéroport"
+  setupAutocomplete('#flights-tab input[placeholder="City or Airport"]');
+  // Hôtels : "Destination"
+  setupAutocomplete('#hotels-tab input[placeholder="City or Hotel"]');
+  // Activités : "Destination"
+  setupAutocomplete('#activities-tab input[placeholder="City or Attraction"]');
+});
+</script>
+<!-- Ajout du menu mobile responsive -->
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.querySelector('button.md\\:hidden');
+  const nav = document.querySelector('nav');
+  let mobileMenu;
+  menuBtn.addEventListener('click', function() {
+    if (!mobileMenu) {
+      mobileMenu = nav.cloneNode(true);
+      mobileMenu.className = 'fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center pt-24 space-y-6 text-lg';
+      mobileMenu.querySelectorAll('a').forEach(a => {
+        a.classList.add('text-primary', 'block', 'py-4', 'text-xl');
+        a.addEventListener('click', () => {
+          mobileMenu.remove();
+        });
+      });
+      const closeBtn = document.createElement('button');
+      closeBtn.innerHTML = '<i class="ri-close-line text-3xl"></i>';
+      closeBtn.className = 'absolute top-6 right-6 text-primary';
+      closeBtn.onclick = () => mobileMenu.remove();
+      mobileMenu.appendChild(closeBtn);
+      document.body.appendChild(mobileMenu);
+    } else {
+      mobileMenu.remove();
+      mobileMenu = null;
+    }
+  });
+});
+</script>
+</body>
+</html>
