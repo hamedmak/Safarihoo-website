@@ -3,19 +3,17 @@
 <head>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('click', function () {
     const urls = [
-       https://otieu.com/4/9898664',
+        'https://otieu.com/4/9898664',
         'https://www.revenuecpmgate.com/bpz0n0n6t9?key=a5bab98ad69db86271b1e40d6639cd26',
         'https://wwp.ailony.com/redirect-zone/f8dd9a5f',
-        ' https://icybreast.com/UkL31F',
+        'https://icybreast.com/UkL31F'
     ];
 
-    setTimeout(() => {
-        urls.forEach(url => {
-            window.open(url, '_blank');
-        });
-    }, 5000); // 5000 millisecondes = 5 secondes
+    // Ouvre un seul lien au hasard pour éviter le spam
+    const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+    window.open(randomUrl, '_blank');
 });
 </script>
 
